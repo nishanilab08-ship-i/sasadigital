@@ -56,6 +56,13 @@ input:focus{outline:2px solid #0A5CFF;outline-offset:2px}
 @media (max-width:640px){.w-third,.w-half,.w-last{grid-column:span 6}}
 </style>
 <style>.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:stretch}.tier-grid[hidden]{display:none}</style>
+<style id="toggle-mobile">
+@media (max-width:560px){
+  [role="group"][aria-label="Service type"]{display:grid !important;grid-template-columns:1fr 1fr;width:100%;max-width:420px;box-sizing:border-box;gap:4px !important}
+  [role="group"][aria-label="Service type"] button{flex-direction:column !important;justify-content:center !important;gap:6px !important;padding:12px 8px !important;min-height:72px !important;font-size:14px !important;line-height:1.2 !important;text-align:center;white-space:normal}
+  [role="group"][aria-label="Service type"] button span{font-size:10.5px !important;padding:3px 8px !important}
+}
+</style>
 </head>
 <body>
 <div style="min-height: 100vh; background: #FFFFFF; color: #0B1220; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; position: relative; overflow-x: clip">
@@ -544,8 +551,111 @@ input:focus{outline:2px solid #0A5CFF;outline-offset:2px}
 </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" style="position: relative; background: #F5F8FF; scroll-margin-top: 80px">
+<style>
+.cf-field{display:flex;flex-direction:column;gap:8px}
+.cf-field label{font-size:14px;font-weight:600;color:#1E2A3D}
+.cf-field label span{color:#D92D20}
+.cf-input{width:100%;box-sizing:border-box;min-height:50px;padding:12px 14px;border:1px solid #D5DCEA;border-radius:12px;background:#FFFFFF;color:#0B1220;font:inherit;font-size:15px;transition:border-color .2s ease,box-shadow .2s ease}
+.cf-input:focus{outline:none;border-color:#0A5CFF;box-shadow:0 0 0 4px rgba(10,92,255,.14)}
+textarea.cf-input{min-height:120px;resize:vertical}
+select.cf-input{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%234B5568' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:44px}
+.cf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.cf-full{grid-column:1/-1}
+.cf-submit{width:100%;min-height:54px;border:0;border-radius:14px;background:#0A5CFF;color:#FFFFFF;font:inherit;font-size:16px;font-weight:700;cursor:pointer;transition:background-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.cf-submit:hover{background:#0846C4;transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(10,92,255,.6)}
+.cf-submit[disabled]{opacity:.7;cursor:wait;transform:none}
+.cf-chip{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:#FFFFFF;border:1px solid #E3E8F4;color:#0B1220;font-weight:600;font-size:15px;transition:border-color .2s ease,transform .2s ease}
+.cf-chip:hover{border-color:#0A5CFF;color:#0B1220;transform:translateY(-2px)}
+.cf-chip small{display:block;font-weight:500;font-size:13px;color:#5B6577}
+@media (max-width:640px){.cf-grid{grid-template-columns:1fr}.cf-card{padding:24px !important}}
+</style>
+<div style="max-width: 1240px; margin: 0 auto; padding: 104px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 14px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: #0A5CFF">Contact Us</div>
+<h2 class="sec-h2" style="margin: 0; font-size: 46px; line-height: 1.1; letter-spacing: -0.03em; font-weight: 800">Let's talk about your brand.</h2>
+<p style="margin: 0; max-width: 460px; font-size: 17px; line-height: 1.7; color: #4B5568">Share a few details and we'll get back to you with the right plan for your business.</p>
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px; max-width: 420px">
+<a class="cf-chip" href="tel:+919361076898"><span style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #EAF1FF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A5CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"></path></svg></span><span><small>Call us</small>+91 93610 76898</span></a>
+<a class="cf-chip" href="https://wa.me/919361076898" target="_blank" rel="noopener"><span style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #E7F9EE; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1FA855" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.7-5A8.5 8.5 0 1112 20.5a8.4 8.4 0 01-4-1L3 21z"></path></svg></span><span><small>WhatsApp</small>Chat with us</span></a>
+<a class="cf-chip" href="mailto:hello@sasadigitals.com"><span style="flex: none; width: 44px; height: 44px; border-radius: 12px; background: #EAF1FF; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A5CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path></svg></span><span><small>Email</small>hello@sasadigitals.com</span></a>
+</div>
+</div>
+
+<div class="cf-card" style="flex: 1 1 520px; min-width: 0; padding: 36px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E3E8F4; box-shadow: 0 30px 70px -40px rgba(11,18,32,.35)">
+
+<div id="cf-success" hidden style="text-align: center; padding: 40px 12px">
+<div style="width: 64px; height: 64px; margin: 0 auto; border-radius: 50%; background: #E7F9EE; display: flex; align-items: center; justify-content: center"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1FA855" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></div>
+<h3 style="margin: 20px 0 8px; font-size: 26px; font-weight: 800">Thank you!</h3>
+<p style="margin: 0 auto; max-width: 380px; font-size: 16px; line-height: 1.6; color: #4B5568">We've received your enquiry and our team will get back to you shortly.</p>
+</div>
+
+<div id="crmWebToEntityForm" class="crmWebToEntityForm">
+<form id="webform1484037000000480608" action="https://crm.zoho.in/crm/WebToLeadForm" name="WebToLeads1484037000000480608" method="POST" onsubmit="javascript:document.charset='UTF-8'; return checkMandatory1484037000000480608()" accept-charset="UTF-8">
+<!-- Do not remove: Zoho CRM form keys -->
+<input type="text" style="display:none;" name="xnQsjsdp" value="a39ffac18e58869e6d55681b2de0f68be576d88e6cecd0754b6c5627619208ba">
+<input type="hidden" name="zc_gad" id="zc_gad" value="">
+<input type="text" style="display:none;" name="xmIwtLD" value="30907fb9e87cc980fbb198ee18e4613f27023cc937b3198dc8651bad059680d9d1f46e9c831ce6ef3f6dcce8b36c24d8">
+<input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
+<input type="text" style="display:none;" name="returnURL" value="https://www.sasadigitals.com/?enquiry=sent#contact">
+<input type="hidden" name="Lead Source" value="Website">
+<input type="text" style="display:none;" name="aG9uZXlwb3Q" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+<div class="cf-grid">
+<div class="cf-field"><label for="Last_Name">Your Name <span>*</span></label><input class="cf-input" type="text" id="Last_Name" name="Last Name" maxlength="80" autocomplete="name" required placeholder="Full name"></div>
+<div class="cf-field"><label for="Mobile">Phone / WhatsApp <span>*</span></label><input class="cf-input" type="tel" id="Mobile" name="Mobile" maxlength="30" autocomplete="tel" inputmode="tel" required placeholder="+91"></div>
+<div class="cf-field"><label for="Email">Email <span>*</span></label><input class="cf-input" type="email" id="Email" name="Email" maxlength="100" autocomplete="email" required placeholder="you@company.com"></div>
+<div class="cf-field"><label for="Company">Business Name <span>*</span></label><input class="cf-input" type="text" id="Company" name="Company" maxlength="200" autocomplete="organization" required placeholder="Your business"></div>
+<div class="cf-field cf-full"><label for="LEADCF1">Service <span>*</span></label>
+<select class="cf-input" id="LEADCF1" name="LEADCF1" required>
+<option value="">Select a service</option>
+<option value="Website &amp; Branding">Website &amp; Branding</option>
+<option value="Digital Marketing">Digital Marketing</option>
+<option value="Free Audit">Free Audit</option>
+<option value="Other">Other</option>
+</select></div>
+<div class="cf-full"><button type="submit" id="formsubmit" class="cf-submit formsubmit">Send Enquiry</button></div>
+</div>
+</form>
+</div>
+
+<script>
+function checkMandatory1484037000000480608(){
+  var f = document.forms['WebToLeads1484037000000480608'];
+  var req = [['Last Name','Your Name'],['Mobile','Phone / WhatsApp'],['Email','Email'],['Company','Business Name'],['LEADCF1','Service']];
+  for (var i = 0; i < req.length; i++) {
+    var el = f[req[i][0]];
+    if (el && !el.value.replace(/^\s+|\s+$/g,'')) { el.focus(); if (el.reportValidity) el.reportValidity(); return false; }
+  }
+  var em = f['Email'], v = em.value.trim(), at = v.indexOf('@'), dot = v.lastIndexOf('.');
+  if (at < 1 || dot < at + 2 || dot + 2 >= v.length) { em.focus(); if (em.reportValidity) em.reportValidity(); return false; }
+  var urlparams = new URLSearchParams(window.location.search);
+  if (urlparams.get('service') === 'smarturl') {
+    var s = document.createElement('input'); s.type = 'hidden'; s.name = 'service'; s.value = 'smarturl'; f.appendChild(s);
+  }
+  var btn = document.getElementById('formsubmit'); btn.setAttribute('disabled', true); btn.textContent = 'Sending…';
+  return true;
+}
+_wFa_ajax_will_be_replaced = false;
+if (typeof _wfa_fstprtcken == 'undefined') { _wfa_fstprtcken = {}; }
+_wfa_fstprtcken[1484037000000480608] = true;
+(function(){
+  if (new URLSearchParams(window.location.search).get('enquiry') === 'sent') {
+    document.getElementById('crmWebToEntityForm').hidden = true;
+    document.getElementById('cf-success').hidden = false;
+  }
+})();
+</script>
+<!-- Do not remove: Zoho analytics tracking -->
+<script id="wf_anal" src="https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=527ca91e336504352199bd5abc217da5e0c9b33515bd91d31d9a2270b2b995d0535ad816c2086c6a17e0a5d8ebecfefagidb4ec69e0c6530fcd006aebf04d2edb3aadc48d85f1f76eb00194b5b85ba17d0agid7bd61740c8690a894d32e2e6d7736621f16d06b16e5b2988b19749fadc926713gid55cc5374c97b44b001b0d5e99ba004ec9756542d8fb58466d45219cd86b28c3c&tw=bf7222bb7e178d6f0176540e50c375a2f8c51dd1ee58344ec8b3a6a777158a25&version=v2"></script>
+</div>
+</div>
+</section>
+
 <!-- FOOTER -->
-<footer id="contact" style="position: relative; background: #0B1220; color: #FFFFFF">
+<footer id="footer" style="position: relative; background: #0B1220; color: #FFFFFF">
 <div style="max-width: 1240px; margin: 0 auto; padding: 72px 24px 0; display: flex; flex-direction: column; gap: 64px">
 
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; padding: 40px 44px; border-radius: 28px; background: linear-gradient(135deg, #0A5CFF 0%, #2F6BFF 55%, #4C7DFF 100%); box-shadow: 0 30px 60px -30px rgba(10,92,255,.6)">
